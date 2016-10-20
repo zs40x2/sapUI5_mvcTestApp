@@ -23,6 +23,7 @@ sap.ui.jsview("sapui5.demo.mvcapp.view.Master", {
             	
             var oTemplate = new sap.m.ColumnListItem({
             	type : "Navigation",
+            	press: [oController.onListPress, oController],
             	cells: [
             			new sap.m.ObjectIdentifier({
             				text: "{ID}"
