@@ -9,13 +9,14 @@
 
 		<script id="sap-ui-bootstrap"
 			src="../../resources/sap-ui-core.js"
+			data-sap-ui-resourceroots='{"sapui5.demo.mvcapp": "./webapp/"}'
 			data-sap-ui-libs="sap.m"
 			data-sap-ui-theme="sap_bluecrystal"
 			data-sap-ui-compatVersion="edge">
 		</script>
 
 		<script>
-		var oData = {
+			var oData = {
 			"CountSuppliers" : "2",
     		"Suppliers":[  
 	        		{  
@@ -47,55 +48,16 @@
             oModel.setData(oData);
             sap.ui.getCore().setModel(oModel);
             
-            var aColumns = [
-	            	new sap.m.Column({
-	            		header : new sap.m.Text({
-	            			text : "ID"
-	            		})
-	            	}),
-	            	new sap.m.Column({
-	            		header: new sap.m.Text({
-	            			text : "Name"
-	            		}),
-	            	})
-            	];
-            	
-            var oTemplate = new sap.m.ColumnListItem({
-            	type : "Navigation",
-            	cells: [
-            			new sap.m.ObjectIdentifier({
-            				text: "{ID}"
-            			}),
-            			new sap.m.ObjectIdentifier({
-            				text: "{Name}"
-            			})
-            		]
-            })
-            
-            var oTableHeader = new sap.m.Toolbar({
-            	content : [
-            			new sap.m.Title({
-            				text : "Number of suppliers: {/CountSuppliers}"
-            			})
-            		]
-            })
-            
-            var oTable = new sap.m.Table({
-            	columns : aColumns,
-            	headerToolbar: oTableHeader
+            var oPageMasterView = sap.ui.view("masterPage", {
+            	type: sap.ui.core.mvc.ViewType.JS,
+            	viewName: "sapui5.demo.mvcapp.view.Master"
             });
             
-            oTable.bindItems("/Suppliers", oTemplate)
-            
-            var oPageMaster = new sap.m.Page("masterPage", {
-            	title: "Supplier Overview",
-            	content: [oTable]
-            });
-            
-            var oApp = new sap.m.App("myApp");
-            oApp.addPage(oPageMaster);
+			var oApp = new sap.m.App({
+				initialPage: "masterPage"
+			});
+            oApp.addPage(oPageMasterView);
             oApp.placeAt("content");
-            
 		</script>
 	</head>
 
