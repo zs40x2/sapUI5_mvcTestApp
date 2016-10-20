@@ -1,9 +1,13 @@
 sap.ui.jsview("sapui5.demo.mvcapp.view.Master", {
-	getControllerame: function() {
+	
+	getControllerName: function() {
+		
 		return "sapui5.demo.mvcapp.controller.Master";
 	},
 	createContent: function(oController) {
-		
+			
+			oController.logError();
+			
             var aColumns = [
 	            	new sap.m.Column({
 	            		header : new sap.m.Text({
