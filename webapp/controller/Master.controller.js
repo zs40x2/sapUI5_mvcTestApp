@@ -9,6 +9,9 @@ sap.ui.define([
 			jQuery.sap.log.error("Error log", "This is an error log", "controller initialized");
 		},
 		onListPress: function(oEvent) {
+			
+			jQuery.sap.log.info("onListPress", "onListPress", "onListPress");
+			
 			var sPageId = "detailPage";
 			oApp.to(sPageId);
 			
