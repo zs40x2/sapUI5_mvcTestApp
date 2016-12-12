@@ -1,7 +1,10 @@
 <mvc:View controllerName="sapui5.demo.mvcapp.controller.Master" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
 	<Page title="Suppier Overview">
 		<content>
-			<Table items="{/Suppliers}">
+			<Table 
+					class="sapUiResponsiveMargin"
+					with="auto"
+					items="{/Suppliers}">
 				<headerToolbar>
 					<Toolbar>
 						<Label id="tableHeader" text="Number of suppliers: {/CountSuppliers}"/>
