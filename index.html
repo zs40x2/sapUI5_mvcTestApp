@@ -22,14 +22,17 @@
 			var oApp;
 			sap.ui.getCore().attachInit(function() {
 				sap.ui.require([
+					"sap/m/Shell",
 					"sap/ui/core/ComponentContainer",
 					"sapui5/demo/mvcapp/Component"
-				], function(ComponentContainer, Component) {
-					new ComponentContainer({
-						height: "100%",
-						component: new Component({
-							id: "mvcAppComponent"
+				], function(Shell, ComponentContainer, Component) {
+					new Shell({
+						app: new ComponentContainer({
+							height: "100%",
+							component: new Component({
+								id: "mvcAppComponent"
 						})
+					})
 					}).placeAt("content")
 				});
 			});
