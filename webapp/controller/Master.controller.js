@@ -12,7 +12,7 @@ sap.ui.define([
 			
 			jQuery.sap.log.info("onListPress", "onListPress", "onListPress");
 			
-			var sPageId = "detailPage";
+			var sPageId = oApp.getPages()[1].getId();
 			oApp.to(sPageId);
 			
 			var oPage = oApp.getPage(sPageId);
