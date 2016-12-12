@@ -9,54 +9,30 @@
 
 		<script id="sap-ui-bootstrap"
 			src="../../resources/sap-ui-core.js"
-			data-sap-ui-resourceroots='{"sapui5.demo.mvcapp": "./webapp/"}'
 			data-sap-ui-libs="sap.m"
 			data-sap-ui-theme="sap_bluecrystal"
-			data-sap-ui-compatVersion="edge">
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-preload="async"
+			data-sap-ui-resourceroots='{"sapui5.demo.mvcapp": "./webapp/"}'>
 		</script>
 
 		<script>
 			jQuery.sap.log.setLevel(jQuery.sap.log.Level.DEBUG);
 			
-			var oData = {
-			"CountSuppliers" : "2",
-    		"Suppliers":[  
-	        		{  
-	            		"ID":0,
-	            		"Name":"Exotic Liquids",
-	        	    	"Address":{  
-	    	            	"Street":"NE 228th",
-		                	"City":"Sammamish",
-	                		"State":"WA",
-	                		"ZipCode":"98074",
-	            	    	"Country":"USA"
-	        	    	}
-	    	        },
-		            {  
-	        	    	"ID":1,
-	    	        	"Name":"Tokyo Traders",
-		            	"Address":{  
-	                		"Street":"NE 40th",
-	                		"City":"Redmond",
-	                		"State":"WA",
-	                		"ZipCode":"98052",
-	                		"Country":"USA"
-	            		}
-	            	}
-            	]
-            };
-            
-            var oModel = sap.ui.model.json.JSONModel();
-            oModel.setData(oData);
-            sap.ui.getCore().setModel(oModel);
-           
-            var oAppView = sap.ui.view({
-            	type: sap.ui.core.mvc.ViewType.XML,
-            	viewName: "sapui5.demo.mvcapp.view.App"
-            })
-            
-            var oApp = oAppView.byId("app");
-            oAppView.placeAt("content");
+			var oApp;
+			sap.ui.getCore().attachInit(function() {
+				sap.ui.require([
+					"sap/ui/core/ComponentContainer",
+					"sapui5/demo/mvcapp/Component"
+				], function(ComponentContainer, Component) {
+					new ComponentContainer({
+						height: "100%",
+						component: new Component({
+							id: "mvcAppComponent"
+						})
+					}).placeAt("content")
+				});
+			});
 		</script>
 	</head>
 

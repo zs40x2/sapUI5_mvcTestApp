@@ -6,10 +6,37 @@ sap.ui.define([
 	
 	return UIComponent.extend("sapui5.demo.mvcapp.Component", {
 		
-		crreateContent: function() {
+		createContent: function() {
 			UIComponent.prototype.createContent.apply(this, arguments); 
 			
-			var oModel = sap.ui.model.json.JSONModel();
+			var oData = {
+				"CountSuppliers" : "2",
+    			"Suppliers":[  
+	        		{  
+	            		"ID":0,
+	            		"Name":"Exotic Liquids",
+	        	    	"Address":{  
+	    	            	"Street":"NE 228th",
+		                	"City":"Sammamish",
+	                		"State":"WA",
+	                		"ZipCode":"98074",
+	            	    	"Country":"USA"
+	        	    	}
+	    	        },
+		            {  
+	        	    	"ID":1,
+	    	        	"Name":"Tokyo Traders",
+		            	"Address":{  
+	                		"Street":"NE 40th",
+	                		"City":"Redmond",
+	                		"State":"WA",
+	                		"ZipCode":"98052",
+	                		"Country":"USA"
+	            		}
+	            	}
+	        ]}; 
+			
+			var oModel = new JSONModel();
             oModel.setData(oData);
             this.setModel(oModel);
            
@@ -18,7 +45,7 @@ sap.ui.define([
             	viewName: "sapui5.demo.mvcapp.view.App"
             });
             
-            oApp = oAppView.byId("app");
+            oApp = oRootView.byId("app");
             return oRootView;
 		}
 	});	
