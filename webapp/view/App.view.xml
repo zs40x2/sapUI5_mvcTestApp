@@ -1,7 +1,5 @@
-<mvc:View id="appview" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
 	<App id="app">
-		<pages>
-			<!-- pages will be filled automatically via routing -->
-		</pages>
+		<!-- pages will be filled automatically via routing -->
 	</App>
 </mvc:View>

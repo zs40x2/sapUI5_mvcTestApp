@@ -49,12 +49,12 @@ sap.ui.define([
 			this.getRouter().initialize();
 		},
 		createContent: function() {
-			/*var oRootView = UIComponent.prototype.createContent.apply(this, arguments);
+			var oRootView = UIComponent.prototype.createContent.apply(this, arguments);
 			
             this.setModel(new JSONModel(this.getMetadata().getConfig().serviceUrl));
            
             oApp = oRootView.byId("app");
-            return oRootView;*/
+            return oRootView;
 		}
 	});	
 });
