@@ -39,6 +39,11 @@ sap.ui.define([
 				}
 			}
 		},
+		init: function() {
+			UIComponent.prototype.init.apply(this, arguments);
+			
+			this.getRouter().initialize();
+		},
 		createContent: function() {
 			var oRootView = UIComponent.prototype.createContent.apply(this, arguments);
 			
