@@ -12,12 +12,11 @@ sap.ui.define([
 			
 			jQuery.sap.log.info("onListPress", "onListPress", "onListPress");
 			
-			var sPageId = oApp.getPages()[1].getId();
-			oApp.to(sPageId);
-			
-			var oPage = oApp.getPage(sPageId);
-			var oContext = oEvent.getSource().getBindingContext();
-			oPage.setBindingContext(oContext);
+			var oRouter = sap.ui.coew.UIComponent.getRouterFor(this);
+			var oItem = oEvent.getSource();
+			oRouter.navTo("detail", {
+				ID: oItem.getBindingContext().getPropoerty("ID")
+			});
 		}
 	});
 });
