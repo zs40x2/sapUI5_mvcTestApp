@@ -3,7 +3,7 @@
 		<content>
 			<Table 
 					class="sapUiResponsiveMargin"
-					with="auto"
+					width="auto"
 					items="{/Suppliers}">
 				<headerToolbar>
 					<Toolbar>
