@@ -7,7 +7,10 @@ sap.ui.define([
 	return Controller.extend("sapui5.demo.mvcapp.controller.Detail", {
 		onInit: function() {
 			this._oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			this._oRouter.getRoute("detail").attachPatternMatched(this._onDetailMatched, this)
+			this._oRouter.getRoute("detail").attachPatternMatched(this._onDetailMatched, this);
+		},
+		_onDetailMatched: function(oEvent) {
+			
 		},
 		onNavPress: function() {
 			
