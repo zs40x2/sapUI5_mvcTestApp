@@ -73,6 +73,36 @@
 				}
 			}
 		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "sapui5.demo.mvcapp.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"transition": "slide"
+			},
+			"routes": [{
+				"pattern": "",
+				"name": "master",
+				"target": "master" 
+			},
+			{
+				"pattern": "detail/{ID}",
+				"name": "detail",
+				"target": "detail"
+			}],
+			"targets": {
+				"master": {
+					"viewName": "Master",
+					"viewLevel": 1
+				},
+				"detail": {
+					"viewName": "Detail",
+					"viewLevel": 2
+				}
+			}
+		},
 		"resources": {
 			"css": [{
 				"uri": "css/style.css"

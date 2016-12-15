@@ -9,36 +9,7 @@ sap.ui.define([
 		metadata: {
 			"rootView": "sapui5.demo.mvcapp.view.App",
 			"manifest": "json",
-			"routing": {
-				"config": {
-					"routerClass": "sap.m.routing.Router",
-					"viewType": "XML",
-					"viewPath": "sapui5.demo.mvcapp.view",
-					"controlId": "app",
-					"controlAggregation": "pages",
-					"transition": "slide"
-				},
-				"routes": [{
-					"pattern": "",
-					"name": "master",
-					"target": "master" 
-				},
-				{
-					"pattern": "detail/{ID}",
-					"name": "detail",
-					"target": "detail"
-				}],
-				"targets": {
-					"master": {
-						"viewName": "Master",
-						"viewLevel": 1
-					},
-					"detail": {
-						"viewName": "Detail",
-						"viewLevel": 2
-					}
-				}
-			}
+			
 		},
 		init: function() {
 			UIComponent.prototype.init.apply(this, arguments);
