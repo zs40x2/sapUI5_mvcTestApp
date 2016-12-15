@@ -12,7 +12,6 @@ sap.ui.define([
 		init: function() {
 			UIComponent.prototype.init.apply(this, arguments);
 			
-			var router = this.getRouter();
 			this.getRouter().initialize();
 		},
 		createContent: function() {
