@@ -12,10 +12,10 @@ sap.ui.define([
 			
 			jQuery.sap.log.info("onListPress", "onListPress", "onListPress");
 			
-			var oRouter = sap.ui.coew.UIComponent.getRouterFor(this);
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			var oItem = oEvent.getSource();
 			oRouter.navTo("detail", {
-				ID: oItem.getBindingContext().getPropoerty("ID")
+				ID: oItem.getBindingContext().getProperty("ID")
 			});
 		}
 	});
