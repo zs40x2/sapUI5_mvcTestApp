@@ -15,7 +15,14 @@ sap.ui.define([
 			oView.bindElement(sObjectPath);
 		},
 		onNavPress: function() {
+			var oHistory = History.getInstance();
+			var sPreviousHash = oHistory.getPreviousHash();
 			
+			if(sPreviousHash !== undefined) {
+				window.history.go(-1);
+			} else {
+				this._oRouter.navTo("master");
+			}
 		}
 	});
 });
