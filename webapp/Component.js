@@ -8,9 +8,7 @@ sap.ui.define([
 
 		metadata: {
 			"rootView": "sapui5.demo.mvcapp.view.App",
-			"config": {
-				"serviceUrl": "webapp/service/data.json"
-			},
+			"manifest": "json",
 			"routing": {
 				"config": {
 					"routerClass": "sap.m.routing.Router",
@@ -51,7 +49,7 @@ sap.ui.define([
 		createContent: function() {
 			var oRootView = UIComponent.prototype.createContent.apply(this, arguments);
 			
-            this.setModel(new JSONModel(this.getMetadata().getConfig().serviceUrl));
+            //this.setModel(new JSONModel(this.getMetadata().getConfig().serviceUrl));
            
             return oRootView;
 		}
