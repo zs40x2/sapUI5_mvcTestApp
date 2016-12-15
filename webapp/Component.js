@@ -53,7 +53,6 @@ sap.ui.define([
 			
             this.setModel(new JSONModel(this.getMetadata().getConfig().serviceUrl));
            
-            oApp = oRootView.byId("app");
             return oRootView;
 		}
 	});	
