@@ -7,9 +7,7 @@ sap.ui.define([
 	return UIComponent.extend("sapui5.demo.mvcapp.Component", {
 
 		metadata: {
-			"rootView": "sapui5.demo.mvcapp.view.App",
-			"manifest": "json",
-			
+			"manifest": "json"
 		},
 		init: function() {
 			UIComponent.prototype.init.apply(this, arguments);

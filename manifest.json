@@ -47,7 +47,7 @@
 	"sap.ui5": {
 		"_version": "1.1.0",
 		"rootView": {
-			"viewName": "firstMVCApp.view.View1",
+			"viewName": "sapui5.demo.mvcapp.view.App",
 			"type": "XML"
 		},
 		"dependencies": {
