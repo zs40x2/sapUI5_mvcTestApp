@@ -10,7 +10,9 @@ sap.ui.define([
 			this._oRouter.getRoute("detail").attachPatternMatched(this._onDetailMatched, this);
 		},
 		_onDetailMatched: function(oEvent) {
-			
+			var sObjectPath = "/Suppliers/" + oEvent.getParameter("arguments").ID;
+			var oView = this.getView();
+			oView.bindElement(sObjectPath);
 		},
 		onNavPress: function() {
 			
