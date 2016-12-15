@@ -1,7 +1,6 @@
 sap.ui.define([
-	"sap/ui/core/UIComponent",
-	"sap/ui/model/json/JSONModel"
-	], function(UIComponent, JSONModel) {
+	"sap/ui/core/UIComponent"
+	], function(UIComponent) {
 		"use strict";
 	
 	return UIComponent.extend("sapui5.demo.mvcapp.Component", {
@@ -16,9 +15,7 @@ sap.ui.define([
 		},
 		createContent: function() {
 			var oRootView = UIComponent.prototype.createContent.apply(this, arguments);
-			
-            //this.setModel(new JSONModel(this.getMetadata().getConfig().serviceUrl));
-           
+
             return oRootView;
 		}
 	});	
