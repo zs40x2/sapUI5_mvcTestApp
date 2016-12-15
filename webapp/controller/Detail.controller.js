@@ -10,7 +10,7 @@ sap.ui.define([
 			this._oRouter.getRoute("detail").attachPatternMatched(this._onDetailMatched, this)
 		},
 		onNavPress: function() {
-			oApp.back();
+			
 		}
 	});
 });
