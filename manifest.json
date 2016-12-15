@@ -2,7 +2,7 @@
 	"_version": "1.1.0",
 	"sap.app": {
 		"_version": "1.1.0",
-		"id": "firstMVCApp",
+		"id": "sapui5.demo.mvcapp",
 		"type": "application",
 		"i18n": "i18n/i18n.properties",
 		"applicationVersion": {
@@ -69,7 +69,7 @@
 			"i18n": {
 				"type": "sap.ui.model.resource.ResourceModel",
 				"settings": {
-					"bundleName": "firstMVCApp.i18n.i18n"
+					"bundleName": "sapui5.demo.mvcapp.i18n.i18n"
 				}
 			}
 		},
