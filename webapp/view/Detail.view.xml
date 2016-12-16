@@ -3,7 +3,8 @@
 		<content>
 			<ObjectHeader title="{Name}" number="ID {ID}">
 				<attributes>
-					<ObjectAttribute text="{Address/Country}"/>
+					<ObjectAttribute text="{Address/Street}, {Address/ZipCode} - {Address/City}"/>
+					<ObjectAttribute text="{Address/State} - {Address/Country}"/>
 				</attributes>
 			</ObjectHeader>
 		</content>
