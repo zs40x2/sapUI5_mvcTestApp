@@ -10,7 +10,15 @@
 				"State":"WA",
 				"ZipCode":"98074",
 				"Country":"USA"
-			}
+			},
+			"Contacts": [{
+				"Position": "CEO",
+				"Name": "Bob Strauß"
+			},
+			{
+				"Position": "Sales Manager",
+				"Name": "Martin Meyers"
+			}]
 	}, 
 	{  
 		"ID":1,
@@ -21,6 +29,18 @@
 			"State":"WA",
 			"ZipCode":"98052",
 			"Country":"USA"
-		}
+		},
+		"Contacts": [{
+				"Position": "CEO",
+				"Name": "Tallinan Toe"
+			},
+			{
+				"Position": "Sales Manager",
+				"Name": "Carl Eisenberg"
+			},
+			{
+				"Position": "CIO",
+				"Name": "Ned Net"
+			}]
 	}]
 }
