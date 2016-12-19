@@ -1,7 +1,7 @@
 <mvc:View controllerName="sapui5.demo.mvcapp.controller.Detail" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
 	<Page title="Supplier Detail" showNavButton="true" navButtonPress="onNavPress">
 		<content>
-			<ObjectHeader title="{Name}" number="ID {ID}">
+			<ObjectHeader title="{ path: 'Name', formatter: '.toUpperCase' }" number="ID {ID}">
 				<attributes>
 					<ObjectAttribute text="{Address/Street}, {Address/ZipCode} - {Address/City}"/>
 					<ObjectAttribute text="{Address/State} - {Address/Country}"/>
