@@ -5,15 +5,17 @@ sap.ui.define([
 	"use strict";
 	
 	return Controller.extend("sapui5.demo.mvcapp.controller.Detail", {
+		/**
+		 * Initialization
+		 */
 		onInit: function() {
 			this._oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			this._oRouter.getRoute("detail").attachPatternMatched(this._onDetailMatched, this);
 		},
-		_onDetailMatched: function(oEvent) {
-			var sObjectPath = "/Suppliers/" + oEvent.getParameter("arguments").ID;
-			var oView = this.getView();
-			oView.bindElement(sObjectPath);
-		},
+		
+		/**
+		 * Event handlers
+		 */
 		onNavPress: function() {
 			var oHistory = History.getInstance();
 			var sPreviousHash = oHistory.getPreviousHash();
@@ -23,6 +25,15 @@ sap.ui.define([
 			} else {
 				this._oRouter.navTo("master");
 			}
+		},
+		
+		/**
+		 *  internal methods
+		 */
+		_onDetailMatched: function(oEvent) {
+			var sObjectPath = "/Suppliers/" + oEvent.getParameter("arguments").ID;
+			var oView = this.getView();
+			oView.bindElement(sObjectPath);
 		}
 	});
 });
