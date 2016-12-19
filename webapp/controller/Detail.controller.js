@@ -28,6 +28,13 @@ sap.ui.define([
 		},
 		
 		/**
+		 * Formatters
+		 */ 
+		toUpperCase: function(sName) {
+			return sName && sName.toUpperCase();
+		},
+		
+		/**
 		 *  internal methods
 		 */
 		_onDetailMatched: function(oEvent) {
