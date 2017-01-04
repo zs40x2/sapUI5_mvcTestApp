@@ -5,16 +5,22 @@ sap.ui.define([
 	
 	return BaseController.extend("sapui5.demo.mvcapp.controller.Master", {
 		
+		/* =========================================================== */
+		/* lifecycle methods                                           */
+		/* =========================================================== */
 		logError: function() {
 			jQuery.sap.log.error("Error log", "This is an error log", "controller initialized");
 		},
 		onListPress: function(oEvent) {
-			
-			jQuery.sap.log.info("onListPress", "onListPress", "onListPress");
-			
-			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			var oItem = oEvent.getSource();
-			oRouter.navTo("detail", {
+			this._showObject(oEvent.getSource());
+		},
+		
+		/* =========================================================== */
+		/* internal methods                                            */
+		/* =========================================================== */
+
+		_showObject : function (oItem) {
+			this.getRouter().navTo("detail", {
 				ID: oItem.getBindingContext().getProperty("ID")
 			});
 		}
