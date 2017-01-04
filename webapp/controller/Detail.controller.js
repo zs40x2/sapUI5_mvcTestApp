@@ -21,14 +21,7 @@ sap.ui.define([
 		 * Event handlers
 		 */
 		onNavPress: function() {
-			var oHistory = History.getInstance();
-			var sPreviousHash = oHistory.getPreviousHash();
-			
-			if(sPreviousHash !== undefined) {
-				window.history.go(-1);
-			} else {
-				this._oRouter.navTo("master");
-			}
+			this.myNavBack("master");
 		},
 		
 		/**
