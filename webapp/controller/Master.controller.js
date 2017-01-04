@@ -1,9 +1,9 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], function(Controller) {
+	"sapui5/demo/mvcapp/controller/BaseController",
+], function(BaseController) {
 	"use strict";
 	
-	return Controller.extend("sapui5.demo.mvcapp.controller.Master", {
+	return BaseController.extend("sapui5.demo.mvcapp.controller.Master", {
 		
 		logError: function() {
 			jQuery.sap.log.error("Error log", "This is an error log", "controller initialized");
