@@ -6,6 +6,9 @@ sap.ui.define([
 	"use strict";
 	
 	return Controller.extend("sapui5.demo.mvcapp.controller.Detail", {
+		
+		 formatter: formatter,
+		 
 		/**
 		 * Initialization
 		 */
