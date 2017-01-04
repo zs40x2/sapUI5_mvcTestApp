@@ -8,9 +8,6 @@ sap.ui.define([
 		/* =========================================================== */
 		/* lifecycle methods                                           */
 		/* =========================================================== */
-		logError: function() {
-			jQuery.sap.log.error("Error log", "This is an error log", "controller initialized");
-		},
 		onListPress: function(oEvent) {
 			this._showObject(oEvent.getSource());
 		},
