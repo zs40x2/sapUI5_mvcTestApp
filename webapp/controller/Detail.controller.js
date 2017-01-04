@@ -12,8 +12,9 @@ sap.ui.define([
 		 * Initialization
 		 */
 		onInit: function() {
-			this._oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			this._oRouter.getRoute("detail").attachPatternMatched(this._onDetailMatched, this);
+			this.getRouter()
+					.getRoute("detail")
+					.attachPatternMatched(this._onObjectMatched, this);
 		},
 		
 		/**
@@ -33,8 +34,11 @@ sap.ui.define([
 		/**
 		 *  internal methods
 		 */
-		_onDetailMatched: function(oEvent) {
+		_onObjectMatched : function (oEvent) {
 			var sObjectPath = "/Suppliers/" + oEvent.getParameter("arguments").ID;
+			this._bindView(sObjectPath);
+		},
+		_bindView : function (sObjectPath) {
 			var oView = this.getView();
 			oView.bindElement(sObjectPath);
 		}
