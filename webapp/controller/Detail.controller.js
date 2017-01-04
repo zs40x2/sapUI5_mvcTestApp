@@ -1,7 +1,8 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
-	"sap/ui/core/routing/History"
-], function(Controller, History) {
+	"sap/ui/core/routing/History",
+	"sapui5/demo/mvcapp/model/formatter"
+], function(Controller, History, formatter) {
 	"use strict";
 	
 	return Controller.extend("sapui5.demo.mvcapp.controller.Detail", {
