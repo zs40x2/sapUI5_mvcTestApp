@@ -6,7 +6,7 @@ sap.ui.define([
 			
 			PhoneNumber : SimpleType.extend("sap.test.phoneNumber", {
 				formatValue: function(oValue) {
-					return "Phone number:" + oValue;
+					return "Phone number: " + oValue;
 				},
 				parseValue: function(oValue) {
 					return oValue;
