@@ -5,6 +5,10 @@
 				<attributes>
 					<ObjectAttribute text="{Address/Street}, {Address/ZipCode} - {Address/City}"/>
 					<ObjectAttribute text="{Address/State} - {Address/Country}"/>
+					<ObjectAttribute text="{
+							path: 'Address/PhoneNumber',
+							type: '.types.PhoneNumber'
+						}"/>
 				</attributes>
 			</ObjectHeader>
 			<Input value= "{Name}"/>
