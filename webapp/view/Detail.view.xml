@@ -11,7 +11,9 @@
 						}"/>
 				</attributes>
 			</ObjectHeader>
+			
 			<Input value= "{Name}"/>
+			
 			<Table items="{Contacts}">
 				<columns>
 					<Column><header><Text text="Position"/></header></Column>
