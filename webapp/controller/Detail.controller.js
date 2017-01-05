@@ -1,12 +1,14 @@
 sap.ui.define([
 	"sapui5/demo/mvcapp/controller/BaseController",
-	"sapui5/demo/mvcapp/model/formatter"
-], function(BaseController, History, formatter) {
+	"sapui5/demo/mvcapp/model/formatter",
+	"sapui5/demo/mvcapp/model/types"
+], function(BaseController, formatter, types) {
 	"use strict";
 	
 	return BaseController.extend("sapui5.demo.mvcapp.controller.Detail", {
 		
 		 formatter: formatter,
+		 types: types,
 		 
 		/**
 		 * Initialization
