@@ -28,6 +28,40 @@
 					</ColumnListItem>
 				</items>
 			</Table>
+			
+			<Table id="auto" width="auto" class="sapUiResponsiveMargin" items="{Products}" noDataText="No data" growing="true" growingScrollToLoad="true">
+				<headerToolbar>
+					<Toolbar>
+						<Title id="tableHeader" text="Supplies Products"/>
+					</Toolbar>
+				</headerToolbar> 
+				<columns>
+					<Column id="idColumn">
+						<header>
+							<Text text="ID" id="idColumnText"/>
+						</header>
+					</Column>
+					<Column id="nameColumn">
+						<header>
+							<Text text="Name" id="nameColumnText"/>
+						</header>
+					</Column>
+					<Column id="priceColumn" hAlign="Right">
+						<header>
+							<Text text="Price" id="priceColumText"/>
+						</header>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<ObjectIdentifier text="{ID}"/>
+							<ObjectIdentifier text="{Name}"/>
+							<ObjectNumber number="{Price}" unit="USD"/>
+						</cells> 
+					</ColumnListItem>
+				</items>
+			</Table>
 		</content>
 	</Page>
 </mvc:View>
