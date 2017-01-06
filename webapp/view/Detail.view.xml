@@ -1,4 +1,8 @@
-<mvc:View controllerName="sapui5.demo.mvcapp.controller.Detail" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+<mvc:View 
+		controllerName="sapui5.demo.mvcapp.controller.Detail" 
+		xmlns:mvc="sap.ui.core.mvc" 
+		xmlns:layout="sap.ui.layout"
+		xmlns="sap.m">
 	<Page title="Supplier Detail" showNavButton="true" navButtonPress="onNavPress">
 		<content>
 			<ObjectHeader title="{ path: 'Name', formatter: '.formatter.toUpperCase' }" number="ID {ID}">
@@ -53,7 +57,9 @@
 					<ColumnListItem>
 						<cells>
 							<ObjectIdentifier text="{ID}"/>
-							<ObjectIdentifier text="{Name}"/>
+							<layout:VerticalLayout>
+								<Text text="{Name}"/>
+							</layout:VerticalLayout>
 							<ObjectNumber number="{Price}" unit="USD"/>
 						</cells> 
 					</ColumnListItem>
