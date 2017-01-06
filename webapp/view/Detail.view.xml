@@ -59,6 +59,7 @@
 							<ObjectIdentifier text="{ID}"/>
 							<layout:VerticalLayout>
 								<Text text="{Name}"/>
+								<Text text="{Allergenics}" visible="{= ${Allergenics} !== ''}"/>
 							</layout:VerticalLayout>
 							<ObjectNumber number="{Price}" unit="USD"/>
 						</cells> 
