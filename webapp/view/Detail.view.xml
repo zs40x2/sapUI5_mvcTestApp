@@ -3,9 +3,9 @@
 		xmlns:mvc="sap.ui.core.mvc" 
 		xmlns:layout="sap.ui.layout"
 		xmlns="sap.m">
-	<Page title="Supplier Detail" showNavButton="true" navButtonPress="onNavPress">
+	<Page title="{i18n>detailTitle}" showNavButton="true" navButtonPress="onNavPress">
 		<content>
-			<ObjectHeader title="{ path: 'Name', formatter: '.formatter.toUpperCase' }" number="ID {ID}">
+			<ObjectHeader title="{ path: 'Name', formatter: '.formatter.toUpperCase' }" number="{i18n>ID} {ID}">
 				<attributes>
 					<ObjectAttribute text="{Address/Street}, {Address/ZipCode} - {Address/City}"/>
 					<ObjectAttribute text="{Address/State} - {Address/Country}"/>
@@ -17,8 +17,8 @@
 			
 			<Table items="{Contacts}">
 				<columns>
-					<Column><header><Text text="Position"/></header></Column>
-					<Column><header><Text text="Name" /></header></Column>
+					<Column><header><Text text="{i18n>tablePositionColumnTitle}"/></header></Column>
+					<Column><header><Text text="{i18n>tableNameColumnTitle}" /></header></Column>
 				</columns>
 				<items>
 					<ColumnListItem>
