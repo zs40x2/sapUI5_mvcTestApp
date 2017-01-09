@@ -1,5 +1,5 @@
 <mvc:View controllerName="sapui5.demo.mvcapp.controller.Master" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
-	<Page title="Suppier Overview">
+	<Page title="{i18n>masterViewTitle}">
 		<content>
 			<Table 
 					class="sapUiResponsiveMargin"
@@ -7,12 +7,12 @@
 					items="{/Suppliers}">
 				<headerToolbar>
 					<Toolbar>
-						<Label id="tableHeader" text="Number of suppliers: {/CountSuppliers}"/>
+						<Label id="tableHeader" text="{i18n>numberOfSuppliers}: {/CountSuppliers}"/>
 					</Toolbar>
 				</headerToolbar>
 				<columns>
-					<Column><header><Text text="ID"/></header></Column>
-					<Column><header><Text text="Name" /></header></Column>
+					<Column><header><Text text="{i18n>tableIDColumnTitle}"/></header></Column>
+					<Column><header><Text text="{i18n>tableNameColumnTitle}" /></header></Column>
 				</columns>
 				<items>
 					<ColumnListItem type="Navigation" press="onListPress">
