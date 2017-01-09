@@ -8,7 +8,7 @@
 			icon="{sap-icon://document}"
 			id="page">
 		<customDescription>
-			<Link id="link" text="Back to master list"/>
+			<Link id="link" text="Back to master list" press="myNavBack"/>
 		</customDescription>
 	</MessagePage>
 </mvc:View>
