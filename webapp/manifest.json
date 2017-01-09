@@ -21,7 +21,6 @@
 			}
 		}
 	},
-
 	"sap.ui": {
 		"_version": "1.1.0",
 		"technology": "UI5",
@@ -38,12 +37,8 @@
 			"tablet": true,
 			"phone": true
 		},
-		"supportedThemes": [
-			"sap_hcb",
-			"sap_bluecrystal"
-		]
+		"supportedThemes": ["sap_hcb", "sap_bluecrystal"]
 	},
-
 	"sap.ui5": {
 		"_version": "1.1.0",
 		"rootView": {
@@ -80,17 +75,25 @@
 				"viewPath": "sapui5.demo.mvcapp.view",
 				"controlId": "app",
 				"controlAggregation": "pages",
-				"transition": "slide"
+				"transition": "slide",
+				"bypassed": {
+					"target": ["notFound"]
+				}
 			},
 			"routes": [{
 				"pattern": "",
 				"name": "master",
-				"target": "master" 
-			},
-			{
+				"target": "master"
+			}, {
 				"pattern": "detail/{ID}",
 				"name": "detail",
 				"target": "detail"
+			}, {
+				"name": "route name",
+				"pattern": "",
+				"titleTarget": "",
+				"greedy": false,
+				"target": ["notFound"]
 			}],
 			"targets": {
 				"master": {
@@ -100,6 +103,13 @@
 				"detail": {
 					"viewName": "Detail",
 					"viewLevel": 2
+				},
+				"notFound": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "NotFound",
+					"viewId": "notFound"
 				}
 			}
 		},
