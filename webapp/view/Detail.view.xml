@@ -4,6 +4,12 @@
 		xmlns:layout="sap.ui.layout"
 		xmlns="sap.m">
 	<Page title="{i18n>detailTitle}" showNavButton="true" navButtonPress="onNavPress">
+		<subHeader>
+			<Toolbar>
+				<Button icon="sap-icon://slim-arrow-up" press="onPageUp"/>
+				<Button icon="sap-icon://slim-arrow-down" press="onPageDown"/>
+			</Toolbar>
+		</subHeader>
 		<content>
 			<ObjectHeader title="{ path: 'Name', formatter: '.formatter.toUpperCase' }" number="{i18n>ID} {ID}">
 				<attributes>
