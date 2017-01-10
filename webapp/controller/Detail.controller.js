@@ -17,6 +17,12 @@ sap.ui.define([
 			this.getRouter()
 					.getRoute("detail")
 					.attachPatternMatched(this._onObjectMatched, this);
+			
+			var oModel = new sap.ui.model.json.JSONModel({
+				buttonPrev: false,
+				buttonNext: false 
+			});
+			this.getView().setModel(oModel, "viewModel");
 		},
 		
 		/**
