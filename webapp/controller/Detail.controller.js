@@ -9,7 +9,7 @@ sap.ui.define([
 		
 		 formatter: formatter,
 		 types: types,
-		 
+
 		/**
 		 * Initialization
 		 */
@@ -31,17 +31,44 @@ sap.ui.define([
 		onNavPress: function() {
 			this.myNavBack("master");
 		},
+		onPageUp: function(oEvent) {
+			var sID = oEvent.getSource().getBindingContext().sPath;
+			sID = parseInt(sID.substr(sID.lastIndexOf("/")+1));
+			sID = sID - 1;
+			this.getRouter().navTo("detail", { ID: sID });	
+		},
+		onPageDown: function(oEvent) {
+			var sID = oEvent.getSource().getBindingContext().sPath;
+			sID = parseInt(sID.substr(sID.lastIndexOf("/")+1));
+			sID = sID + 1;
+			this.getRouter().navTo("detail", { ID: sID });	
+		},
 		
 		/**
 		 *  internal methods
 		 */
 		_onObjectMatched : function (oEvent) {
-			var sObjectPath = "/Suppliers/" + oEvent.getParameter("arguments").ID;
+			this.sObjectId = oEvent.getParameter("arguments").ID;
+			var sObjectPath = "/Suppliers/" + this.sObjectId;
+			
 			this._bindView(sObjectPath);
+			this._updateViewModel();
 		},
 		_bindView : function (sObjectPath) {
 			var oView = this.getView();
 			oView.bindElement(sObjectPath);
+		},
+		_updateViewModel : function() {
+			var oModel = this.getView().getModel();
+			var oViewModel = this.getView().getModel("viewModel");
+			var nextObjectId = parseInt(this.sObjectId) + 1;
+			var prevObjectId = parseInt(this.sObjectId) - 1;
+			
+			var bNext = !!oModel.getProperty("/Suppliers/" + nextObjectId);
+			var bPrev = !!oModel.getProperty("/Suppliers/" + prevObjectId);
+			
+			oViewModel.setProperty("/buttonNext", bNext);
+			oViewModel.setProperty("/buttonPrev", bPrev);
 		}
 	});
 });
