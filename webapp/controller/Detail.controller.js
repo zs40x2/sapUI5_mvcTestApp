@@ -33,13 +33,13 @@ sap.ui.define([
 		},
 		onPageUp: function(oEvent) {
 			var sID = oEvent.getSource().getBindingContext().sPath;
-			sID = parseInt(sID.substr(sID.lastIndexOf("/")+1), 10);
+			sID = parseInt(sID.substr(sID.lastIndexOf("/") + 1), 10);
 			sID = sID - 1;
 			this.getRouter().navTo("detail", { ID: sID });	
 		},
 		onPageDown: function(oEvent) {
 			var sID = oEvent.getSource().getBindingContext().sPath;
-			sID = parseInt(sID.substr(sID.lastIndexOf("/")+1), 10);
+			sID = parseInt(sID.substr(sID.lastIndexOf("/") + 1), 10);
 			sID = sID + 1;
 			this.getRouter().navTo("detail", { ID: sID });	
 		},
