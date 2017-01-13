@@ -7,7 +7,7 @@
 					items="{/}">
 				<headerToolbar>
 					<Toolbar>
-						<Label id="tableHeader" text="{i18n>numberOfSuppliers}: {/CountSuppliers}"/>
+						<Label id="tableHeader" text="{i18n>numberOfSuppliers}: {/length}"/>
 					</Toolbar>
 				</headerToolbar>
 				<columns>
