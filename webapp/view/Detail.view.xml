@@ -20,8 +20,6 @@
 				</attributes>
 			</ObjectHeader>
 			
-			<Input value= "{Name}"/>
-			
 			<Table width="auto" class="sapUiResponsiveMargin" items="{Contacts}" noDataText="{i18n>tableNoDataText}" growing="true" growingScrollToLoad="true">
 				<headerToolbar>
 					<Toolbar>
