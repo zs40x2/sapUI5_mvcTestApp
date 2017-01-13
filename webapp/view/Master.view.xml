@@ -4,7 +4,7 @@
 			<Table 
 					class="sapUiResponsiveMargin"
 					width="auto"
-					items="{/Suppliers}">
+					items="{/}">
 				<headerToolbar>
 					<Toolbar>
 						<Label id="tableHeader" text="{i18n>numberOfSuppliers}: {/CountSuppliers}"/>

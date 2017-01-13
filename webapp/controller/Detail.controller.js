@@ -49,7 +49,7 @@ sap.ui.define([
 		 */
 		_onObjectMatched : function (oEvent) {
 			this.sObjectId = oEvent.getParameter("arguments").ID;
-			var sObjectPath = "/Suppliers/" + this.sObjectId;
+			var sObjectPath = "/" + this.sObjectId;
 			
 			this._bindView(sObjectPath);
 			this._updateViewModel();
@@ -64,8 +64,8 @@ sap.ui.define([
 			var nextObjectId = parseInt(this.sObjectId) + 1;
 			var prevObjectId = parseInt(this.sObjectId) - 1;
 			
-			var bNext = !!oModel.getProperty("/Suppliers/" + nextObjectId);
-			var bPrev = !!oModel.getProperty("/Suppliers/" + prevObjectId);
+			var bNext = !!oModel.getProperty("/" + nextObjectId);
+			var bPrev = !!oModel.getProperty("/" + prevObjectId);
 			
 			oViewModel.setProperty("/buttonNext", bNext);
 			oViewModel.setProperty("/buttonPrev", bPrev);
