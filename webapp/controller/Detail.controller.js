@@ -47,6 +47,7 @@ sap.ui.define([
 		/**
 		 *  internal methods
 		 */
+		 
 		_onObjectMatched : function (oEvent) {
 			this.sObjectId = oEvent.getParameter("arguments").ID;
 			var sObjectPath = "/" + this.sObjectId;

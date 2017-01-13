@@ -7,8 +7,8 @@
 		<subHeader>
 			<Toolbar>
 				<ToolbarSpacer/>
-				<Button icon="sap-icon://slim-arrow-up" press="onPageUp" enabled="{viewModel>/buttonPrev}" visible="{device>/system/phone}" />
-				<Button icon="sap-icon://slim-arrow-down" press="onPageDown" enabled="{viewModel>/buttonNext}" visible="{device>/system/phone}" />
+				<Button icon="sap-icon://slim-arrow-up" press="onPageUp" enabled="{viewModel>/buttonPrev}" visible="{device>/system/phone}" tooltip="Previous"/>
+				<Button icon="sap-icon://slim-arrow-down" press="onPageDown" enabled="{viewModel>/buttonNext}" visible="{device>/system/phone}" tooltip="Next" />
 			</Toolbar>
 		</subHeader>
 		<content>
