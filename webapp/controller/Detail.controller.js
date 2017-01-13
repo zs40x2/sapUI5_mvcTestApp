@@ -33,13 +33,13 @@ sap.ui.define([
 		},
 		onPageUp: function(oEvent) {
 			var sID = oEvent.getSource().getBindingContext().sPath;
-			sID = parseInt(sID.substr(sID.lastIndexOf("/")+1));
+			sID = parseInt(sID.substr(sID.lastIndexOf("/")+1), 10);
 			sID = sID - 1;
 			this.getRouter().navTo("detail", { ID: sID });	
 		},
 		onPageDown: function(oEvent) {
 			var sID = oEvent.getSource().getBindingContext().sPath;
-			sID = parseInt(sID.substr(sID.lastIndexOf("/")+1));
+			sID = parseInt(sID.substr(sID.lastIndexOf("/")+1), 10);
 			sID = sID + 1;
 			this.getRouter().navTo("detail", { ID: sID });	
 		},
@@ -61,8 +61,8 @@ sap.ui.define([
 		_updateViewModel : function() {
 			var oModel = this.getView().getModel();
 			var oViewModel = this.getView().getModel("viewModel");
-			var nextObjectId = parseInt(this.sObjectId) + 1;
-			var prevObjectId = parseInt(this.sObjectId) - 1;
+			var nextObjectId = parseInt(this.sObjectId, 10) + 1;
+			var prevObjectId = parseInt(this.sObjectId, 10) - 1;
 			
 			var bNext = !!oModel.getProperty("/" + nextObjectId);
 			var bPrev = !!oModel.getProperty("/" + prevObjectId);
