@@ -89,11 +89,9 @@
 				"name": "detail",
 				"target": "detail"
 			}, {
-				"name": "route name",
-				"pattern": "",
-				"titleTarget": "",
-				"greedy": false,
-				"target": ["notFound"]
+				"name": "edit",
+				"pattern": "edit/{ID}",
+				"target": "edit"
 			}],
 			"targets": {
 				"master": {
@@ -110,6 +108,14 @@
 					"clearAggregation": true,
 					"viewName": "NotFound",
 					"viewId": "notFound"
+				},
+				"edit": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "Edit",
+					"viewId": "edit",
+					"viewLevel": 3
 				}
 			}
 		},
