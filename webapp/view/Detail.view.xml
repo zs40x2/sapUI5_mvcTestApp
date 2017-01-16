@@ -77,5 +77,11 @@
 				</items>
 			</Table>
 		</content>
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Button text="{i18n>Edit}" press="onEdit" />
+			</Toolbar>
+		</footer>
 	</Page>
 </mvc:View>
