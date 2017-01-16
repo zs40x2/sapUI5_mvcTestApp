@@ -36,10 +36,10 @@ sap.ui.define([
 			//check if we're in edit or createMode
 			if(!this.getModel("viewModel").getProperty("/createMode")){
 				//we're not, so we update an existing entry
-				sUrl = "/Suppliers/" + oObject.id;
+				sUrl = "/" + oObject.id;
 				sLocalPath = sPath;
 			} else {
-				sUrl = "/Suppliers";
+				sUrl = "/";
 			}
 			oModel.saveEntry(oObject, sUrl, sLocalPath);
 			oModel.attachEventOnce("requestCompleted", function(){
@@ -55,8 +55,8 @@ sap.ui.define([
 			if (oEvent.getParameter("name")==="master"){
 			    return;
 			}
-			if(oEventData && oEventData.id){
-				this.sObjectPath = "/" + oEventData.id;
+			if(oEventData && oEventData.ID){
+				this.sObjectPath = "/" + oEventData.ID;
 			} else {
 				this.getView().getModel("viewModel").setProperty("/createMode", true);
 				this.getModel().createEntry("/");
