@@ -43,6 +43,10 @@ sap.ui.define([
 			sID = sID + 1;
 			this.getRouter().navTo("detail", { ID: sID });	
 		},
+		onEdit: function(oEvent) {
+			var sObjectPath = this.getView().getElementBinding().getPath().substr(1);
+			this.getRouter().navTo("edit", { id: sObjectPath }, false);
+		},
 		
 		/**
 		 *  internal methods
