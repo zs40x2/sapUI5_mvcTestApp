@@ -45,7 +45,7 @@ sap.ui.define([
 		},
 		onEdit: function(oEvent) {
 			var sObjectPath = this.getView().getElementBinding().getPath().substr(1);
-			this.getRouter().navTo("edit", { id: sObjectPath }, false);
+			this.getRouter().navTo("edit", { ID: sObjectPath }, false);
 		},
 		
 		/**
