@@ -11,6 +11,9 @@ sap.ui.define([
 		onListPress: function(oEvent) {
 			this._showObject(oEvent.getSource());
 		},
+		onAddSupplier: function(oEvent) {
+			this.getRouter().navTo("edit");
+		},
 		
 		/* =========================================================== */
 		/* internal methods                                            */
