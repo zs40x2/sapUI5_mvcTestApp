@@ -8,6 +8,8 @@
 				<headerToolbar>
 					<Toolbar>
 						<Label id="tableHeader" text="{i18n>numberOfSuppliers}: {/length}"/>
+						<ToolbarSpacer/>
+						<Button icon="sap-icon://add" tooltip="{i18n>btnAddSupplier}" press="onAddSupplier" />
 					</Toolbar>
 				</headerToolbar>
 				<columns>
