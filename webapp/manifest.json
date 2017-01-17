@@ -90,7 +90,7 @@
 				"target": "detail"
 			}, {
 				"name": "edit",
-				"pattern": "edit/{ID}",
+				"pattern": "edit/:ID",
 				"target": "edit"
 			}],
 			"targets": {
